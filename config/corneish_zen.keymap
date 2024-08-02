@@ -77,7 +77,7 @@
 
             bindings = <
 &trans     &kp EXCL  &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans     &trans    &trans   &trans     &trans     &trans        &kp MINUS  &kp PLUS   &kp BSLH   &kp LBKT  &kp RBKT  &kp TILDE
+&trans     &trans    &trans   &trans     &trans     &trans        &kp MINUS  &kp PLUS   &kp BSLH   &kp LBKT  &kp RBKT  &kp GRAVE
 &trans     &trans    &trans   &trans     &trans     &trans        &kp UNDER  &kp EQUAL  &kp PIPE   &kp LBRC  &kp RBRC  &kp RALT
                                        &trans    &trans       &kp SPACE  &kp RET    &trans     &trans
             >;
