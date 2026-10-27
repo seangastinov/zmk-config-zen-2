@@ -6,10 +6,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     chosen {
@@ -37,15 +35,15 @@
 
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   | 
+            // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   | 
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
-            //                    | RSE | GUI | SPC |   | ENT | LWR  | ESC |
+            //                    | RSE | CTRL| SPC |   | ENT | LWR  | GUI |
 
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R    &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F    &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp ESC    &kp A  &kp S  &kp D     &kp F    &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHIFT &kp Z  &kp X  &kp C     &kp V    &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                         &mo 2     &kp LGUI &lt 3 SPACE    &mt RSHIFT ENTER  &mo 1  &kp ESC
+                         &mo 2     &kp LCTRL &lt 3 SPACE    &mt RSHIFT ENTER  &mo 1  &kp LGUI
             >;
         };
 
@@ -54,14 +52,14 @@
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // |  CLR | BTCL | BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     | DEL  |
-            // | SHFT | RG+  | RG- | EP+ | EP- |     |   |     |     |     |     |     |  ALT |
+            // |      |      |     |     |     |     |   |     |     |     |     |     |      |
+            // | SHFT |      |     |     |     |     |   |     |     |     |     |     |  ALT |
             //                     |     | GUI | SPC |   | ENT |PRSCR| ESC |
 
             bindings = <
 &trans  &kp N1           &kp N2          &kp N3             &kp N4            &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0   &kp BSPC
-&trans  &rgb_ug RGB_ON   &rgb_ug RGB_OFF &ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans   &trans
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2      &bt BT_SEL 3       &trans           &trans           &trans           &trans           &trans   &kp RALT
+&trans  &trans           &trans          &trans             &trans            &trans             &trans           &trans           &trans           &trans           &trans   &trans
+&trans  &trans           &trans          &trans             &trans            &trans             &trans           &trans           &trans           &trans           &trans   &kp RALT
                                          &trans             &trans            &trans             &kp INS          &trans           &trans
             >;
         };
@@ -72,13 +70,13 @@
             // -----------------------------------------------------------------------------------------
             // |  ~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  _  |  =  |  \  |  [  |  ]  |  ~   |
-            // | SHFT |     |     |     |     |     |   |  -  |  +  | "|" |  {  |  }  | ALT  |
+            // | SHFT | BTCL| BT0 | BT1 |     |     |   |  -  |  +  | "|" |  {  |  }  | ALT  |
             //                    |     | GUI | SPC |   | ENT |     | ESC |
 
             bindings = <
 &trans     &kp EXCL  &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans     &trans    &trans   &trans     &trans     &trans        &kp MINUS  &kp PLUS   &kp BSLH   &kp LBKT  &kp RBKT  &kp GRAVE
-&trans     &trans    &trans   &trans     &trans     &trans        &kp UNDER  &kp EQUAL  &kp PIPE   &kp LBRC  &kp RBRC  &kp RALT
+&trans     &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &trans        &trans              &kp UNDER  &kp EQUAL  &kp PIPE   &kp LBRC  &kp RBRC  &kp RALT
                                        &trans    &trans       &kp SPACE  &kp RET    &trans     &trans
             >;
         };
