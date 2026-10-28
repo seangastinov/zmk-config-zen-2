@@ -25,77 +25,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-
-        // Number-layer digits stay digits even with Shift held
-        n1_morph: n1_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N1>, <&kp N1>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n2_morph: n2_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp N2>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n3_morph: n3_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N3>, <&kp N3>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n4_morph: n4_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp N4>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n5_morph: n5_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N5>, <&kp N5>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n6_morph: n6_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N6>, <&kp N6>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n7_morph: n7_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N7>, <&kp N7>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n8_morph: n8_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N8>, <&kp N8>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n9_morph: n9_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp N9>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n0_morph: n0_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp N0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     keymap {
@@ -128,7 +57,7 @@
             //                     |     | GUI | SPC |   | ENT |PRSCR| ESC |
 
             bindings = <
-&trans  &n1_morph         &n2_morph        &n3_morph           &n4_morph          &n5_morph           &n6_morph         &n7_morph         &n8_morph         &n9_morph         &n0_morph &kp BSPC
+&trans  &kp N1           &kp N2          &kp N3             &kp N4            &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0   &kp BSPC
 &trans  &trans           &trans          &trans             &trans            &trans             &trans           &trans           &trans           &trans           &trans   &trans
 &trans  &trans           &trans          &trans             &trans            &trans             &trans           &trans           &trans           &trans           &trans   &kp LALT
                                          &trans             &trans            &trans             &kp INS          &trans           &trans
